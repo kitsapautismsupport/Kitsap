@@ -53,4 +53,40 @@ document.addEventListener("DOMContentLoaded", function () {
             aboutFull.style.display = "none";
         });
     }
+    
+//contact form
+  const form = document.getElementById('contactForm');
+  const result = document.getElementById('result');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    result.innerHTML = 'Please wait...';
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: json,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        result.innerHTML = 'Thank you for your message!';
+        form.reset();
+      } else {
+        result.innerHTML = 'Oops! Something went wrong.';
+      }
+    } catch (error) {
+      result.innerHTML = 'There was a problem submitting the form.';
+    }
+
+});
 });
