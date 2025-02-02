@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitsap Autism Community Board</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitsap Neurodiversity Hub</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <header>
-        <h1>Kitsap Autism Community Board</h1>
-<!--         <button id="accessibilityBtn">Accessibility</button> -->
-    </header>
+  <header>
+    <h1>Kitsap Neurodiversity Hub</h1>
+    <button id="accessibilityBtn">Accessibility</button>
+  </header>
 
-    <main>
-        <section id="flyers">
+  <!-- Expandable About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <!-- Short summary (less than 30 words) visible on load -->
+    <p id="about-summary">
+      Welcome to Kitsap Neurodiversity Hub—a community space for Autists, ADHDers, and all neurodivergent individuals to connect.
+    </p>
+    <button id="toggleAbout">Read More</button>
+    <!-- Full About content hidden initially -->
+    <div id="about-full" style="display: none;">
+      <p>
+        Welcome to Kitsap Neurodiversity Hub, a space designed for Autists, ADHDers, and all neurodivergent individuals to connect, find community, and access events tailored to our needs. Whether you’re diagnosed, self-diagnosed, or still exploring your identity, you are welcome here.
+      </p>
+      <p>
+        Our core values are inclusion, acceptance, and neurodiversity. We embrace people from all parts of the spectrum and strive to create a welcoming environment where everyone feels valued and understood. Unlike many other spaces that focus on therapy, “normalization,” or support for families of diagnosed children, our focus is on authentic connection. This is a place where you can be yourself without judgment, where your unique ways of socializing and communicating are not just accepted but celebrated.
+      </p>
+      <p>
+        We know how isolating the world can be when it isn’t built for us. Here, you don’t have to explain your quirks, mask your traits, or conform to neurotypical expectations. Instead, we offer a way to break that isolation by sharing opportunities to meet others who truly understand.
+      </p>
+      <p>
+        Our primary purpose is to share flyers and event information relevant to Autistic and neurodivergent individuals—meetups, social gatherings, workshops, and more. Whether you’re looking for a quiet space to connect with like-minded people or an activity designed with sensory-friendly considerations, we aim to help you find events where you can feel safe, comfortable, and included.
+      </p>
+      <p>
+        Come as you are. You belong here.
+      </p>
+      <button id="toggleAboutLess">Read Less</button>
+    </div>
+  </section>
 
-            <div class="flyer">
+  <!-- Event Flyers Section -->
+  <section id="flyers">
+   <div class="flyer">
                 <h2>Therapeutic Craft</h2>
                 <p>Date: February 1, 2025</p>
                 <p>Time: 1:00 PM - 3:00 PM</p>
@@ -38,29 +66,29 @@
                 <p>Location: Poulsbo First Lutheran Church</p>
                 <p>Ages 18+ support group.  Bring games!</p>
             </div>
-        </section>
-    </main>
+  </section>
 
-<!--     <div id="accessibilityModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Accessibility Options</h2>
-            <label for="fontSize">Font Size:</label>
-            <select id="fontSize">
-                <option value="normal">Normal</option>
-                <option value="large">Large</option>
-                <option value="x-large">Extra Large</option>
-            </select>
-            <label for="contrast">Contrast:</label>
-            <select id="contrast">
-                <option value="default">Default</option>
-                <option value="high">High Contrast</option>
-                <option value="dark">Dark Mode</option>
-            </select>
-            <button id="applySettings">Apply</button>
-        </div>
+  <!-- Accessibility Modal -->
+  <div id="accessibilityModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Accessibility Options</h2>
+      <label for="fontSize">Font Size:</label>
+      <select id="fontSize">
+        <option value="normal">Normal</option>
+        <option value="large">Large</option>
+        <option value="x-large">Extra Large</option>
+      </select>
+      <label for="contrast">Contrast:</label>
+      <select id="contrast">
+        <option value="default">Default</option>
+        <option value="high">High Contrast</option>
+        <option value="dark">Dark Mode</option>
+      </select>
+      <button id="applySettings">Apply</button>
     </div>
- -->
-    <script src="index.js"></script>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
