@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kitsap Neurodiversity Hub</title>
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <header>
     <h1>Kitsap Neurodiversity Hub</h1>
     <button id="accessibilityBtn">Accessibility</button>
+    <button id="contactBtn">Contact Us</button>
   </header>
 
   <!-- Expandable About Section -->
   <section id="about">
     <h2>About Us</h2>
-    <!-- Short summary (less than 30 words) visible on load -->
     <p id="about-summary">
       Welcome to Kitsap Neurodiversity Hub—a community space for Autists, ADHDers, and all neurodivergent individuals to connect.
     </p>
     <button id="toggleAbout">Read More</button>
-    <!-- Full About content hidden initially -->
     <div id="about-full" style="display: none;">
       <p>
         Welcome to Kitsap Neurodiversity Hub, a space designed for Autists, ADHDers, and all neurodivergent individuals to connect, find community, and access events tailored to our needs. Whether you’re diagnosed, self-diagnosed, or still exploring your identity, you are welcome here.
       </p>
       <p>
-        Our core values are inclusion, acceptance, and neurodiversity. We embrace people from all parts of the spectrum and strive to create a welcoming environment where everyone feels valued. Our focus is on authentic connection. This is a place where you can be yourself without judgment, where your unique ways of socializing and communicating are not just accepted but celebrated.
+        Our core values are inclusion, acceptance, and neurodiversity. We embrace people from all parts of the spectrum and strive to create a welcoming environment where everyone feels valued and understood. This is a place where you can be yourself without judgment, where your unique ways of socializing and communicating are not just accepted but celebrated.
       </p>
       <p>
         We know how isolating the world can be when it isn’t built for us. Here, you don’t have to explain your quirks, mask your traits, or conform to neurotypical expectations. Instead, we offer a way to break that isolation by sharing opportunities to meet others who truly understand.
@@ -53,7 +52,7 @@
 
     <div class="flyer">
       <h2>Square Pegs Kitsap</h2>
-      <p>Date: February 15, 2025</p>
+      <p>Date: February 15, 5</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Ashley's Pub</p>
       <p>Join us for a fun, sensory-friendly support group with games to choose from. 21+</p>
@@ -61,7 +60,7 @@
 
     <div class="flyer">
       <h2>Social Meetup</h2>
-      <p>Date: March 1, 2025</p>
+      <p>Date: March 1, 5</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Poulsbo First Lutheran Church</p>
       <p>Ages 18+ support group. Bring games!</p>
@@ -86,6 +85,28 @@
         <option value="dark">Dark Mode</option>
       </select>
       <button id="applySettings">Apply</button>
+    </div>
+  </div>
+
+  <!-- Contact Form Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="224897b7-2718-4313-bf8e-fa436a19f4b1">
+        <input type="hidden" name="from_name" value="Kitsap Neurodiversity Hub">
+        <input type="hidden" name="from_email" value="kitsapneurodiversityhub@gmail.com">
+        <input type="hidden" name="subject" value="New Contact Form Submission">
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </div>
 
