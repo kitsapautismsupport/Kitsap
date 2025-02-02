@@ -1,55 +1,56 @@
-// Accessibility Modal functionality
-document.getElementById('accessibilityBtn').addEventListener('click', function () {
-  document.getElementById('accessibilityModal').style.display = 'flex';
-});
+document.addEventListener("DOMContentLoaded", function () {
+    // Accessibility Modal
+    const modal = document.getElementById("accessibilityModal");
+    const openModalBtn = document.getElementById("accessibilityBtn");
+    const closeModalBtn = document.querySelector(".close");
+    const applySettingsBtn = document.getElementById("applySettings");
+    const fontSizeSelect = document.getElementById("fontSize");
+    const contrastSelect = document.getElementById("contrast");
 
-document.querySelector('.close').addEventListener('click', function () {
-  document.getElementById('accessibilityModal').style.display = 'none';
-});
+    if (modal && openModalBtn && closeModalBtn) {
+        openModalBtn.addEventListener("click", () => {
+            modal.style.display = "block";
+        });
 
-document.getElementById('applySettings').addEventListener('click', function () {
-  let fontSize = document.getElementById('fontSize').value;
-  let contrast = document.getElementById('contrast').value;
+        closeModalBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
 
-  // Adjust font size
-  document.body.style.fontSize = fontSize === 'normal'
-    ? '16px'
-    : fontSize === 'large'
-      ? '18px'
-      : '20px';
+        window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
 
-  // Remove any existing dark mode class
-  document.body.classList.remove('dark-mode');
+        applySettingsBtn.addEventListener("click", () => {
+            // Apply Font Size
+            document.body.style.fontSize = fontSizeSelect.value === "normal" ? "" : fontSizeSelect.value;
 
-  if (contrast === 'high') {
-    document.body.style.background = 'yellow';
-    document.body.style.color = 'black';
-  } else if (contrast === 'dark') {
-    document.body.style.background = '#222';
-    document.body.style.color = 'white';
-    // Add dark mode class for additional styling (like dark flyers)
-    document.body.classList.add('dark-mode');
-  } else {
-    document.body.style.background = '';
-    document.body.style.color = '';
-  }
+            // Apply Contrast
+            document.body.classList.remove("high-contrast", "dark-mode");
+            if (contrastSelect.value === "high") {
+                document.body.classList.add("high-contrast");
+            } else if (contrastSelect.value === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        });
+    }
 
-  document.getElementById('accessibilityModal').style.display = 'none';
-});
+    // About Section Expand/Collapse
+    const aboutSummary = document.getElementById("about-summary");
+    const aboutFull = document.getElementById("about-full");
+    const readMoreBtn = document.getElementById("toggleAbout");
+    const readLessBtn = document.getElementById("toggleAboutLess");
 
-// About Section Toggle functionality
-const toggleAboutBtn = document.getElementById('toggleAbout');
-const toggleAboutLessBtn = document.getElementById('toggleAboutLess');
-const aboutFull = document.getElementById('about-full');
+    if (aboutSummary && aboutFull && readMoreBtn && readLessBtn) {
+        readMoreBtn.addEventListener("click", () => {
+            aboutSummary.style.display = "none";
+            aboutFull.style.display = "block";
+        });
 
-toggleAboutBtn.addEventListener('click', function () {
-  aboutFull.style.display = 'block';
-  toggleAboutBtn.style.display = 'none';
-});
-
-if (toggleAboutLessBtn) {
-  toggleAboutLessBtn.addEventListener('click', function () {
-    aboutFull.style.display = 'none';
-    toggleAboutBtn.style.display = 'inline-block';
-  });
+        readLessBtn.addEventListener("click", () => {
+            aboutSummary.style.display = "block";
+            aboutFull.style.display = "none";
+        });
+    }
 });
