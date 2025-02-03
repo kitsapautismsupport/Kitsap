@@ -41,21 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Contact Form Submission
-    const form = document.getElementById("contactForm");
-    const result = document.getElementById("result");
-
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        result.innerHTML = "Please wait...";
-
-        setTimeout(() => {
-            result.innerHTML = "Thank you for your message!";
-            form.classList.add("hidden"); // Hide the form after submission
-        }, 1000);
-    });
-
-
     // About Section Expand/Collapse
     const aboutSummary = document.getElementById("about-summary");
     const aboutFull = document.getElementById("about-full");
@@ -84,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
             result.innerHTML = "Thank you for your message!";
-            form.reset();
+            form.classList.add("hidden"); // Hide form fields and button after submission
         }, 1000);
     });
 });
