@@ -52,7 +52,7 @@
 
     <div class="flyer">
       <h2>Square Pegs Kitsap</h2>
-      <p>Date: February 15, 5</p>
+      <p>Date: February 15, 2025</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Ashley's Pub</p>
       <p>Join us for a fun, sensory-friendly support group with games to choose from. 21+</p>
@@ -60,7 +60,7 @@
 
     <div class="flyer">
       <h2>Social Meetup</h2>
-      <p>Date: March 1, 5</p>
+      <p>Date: March 1, 2025</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Poulsbo First Lutheran Church</p>
       <p>Ages 18+ support group. Bring games!</p>
@@ -70,7 +70,7 @@
   <!-- Accessibility Modal -->
   <div id="accessibilityModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close accessibility-close">&times;</span>
       <h2>Accessibility Options</h2>
       <label for="fontSize">Font Size:</label>
       <select id="fontSize">
@@ -91,14 +91,9 @@
   <!-- Contact Form Modal -->
   <div id="contactModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close contact-close">&times;</span>
       <h2>Contact Us</h2>
-      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="224897b7-2718-4313-bf8e-fa436a19f4b1">
-        <input type="hidden" name="from_name" value="Kitsap Neurodiversity Hub">
-        <input type="hidden" name="from_email" value="kitsapneurodiversityhub@gmail.com">
-        <input type="hidden" name="subject" value="New Contact Form Submission">
-        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+      <form id="contactForm">
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>
         <label for="email">Your Email:</label>
@@ -107,6 +102,7 @@
         <textarea id="message" name="message" rows="4" required></textarea>
         <button type="submit">Send Message</button>
       </form>
+      <p id="result"></p>
     </div>
   </div>
 
