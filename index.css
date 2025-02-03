@@ -68,6 +68,31 @@ header {
   cursor: pointer;
 }
 
+/* Contact Form Styling */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between fields */
+}
+
+#contactForm label, 
+#contactForm input, 
+#contactForm textarea, 
+#contactForm button {
+  width: 100%;
+}
+
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Hide form elements when successfully submitted */
+.hidden {
+  display: none;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   #flyers {
