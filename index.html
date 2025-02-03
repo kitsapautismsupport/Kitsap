@@ -9,46 +9,65 @@
 <body>
   <header>
     <h1>Kitsap Neurodiversity Hub</h1>
-    <button id="accessibilityBtn">Accessibility</button>
     <button id="contactBtn">Contact Us</button>
   </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p id="about-summary">
+      Welcome to Kitsap Neurodiversity Hub—a community space for Autists, ADHDers, and all neurodivergent individuals to connect.
+    </p>
+    <button id="toggleAbout">Read More</button>
+    <div id="about-full" style="display: none;">
+      <p>
+        Welcome to Kitsap Neurodiversity Hub, a space designed for Autists, ADHDers, and all neurodivergent individuals to connect, find community, and access events tailored to our needs. Whether you’re diagnosed, self-diagnosed, or still exploring your identity, you are welcome here.
+      </p>
+      <p>
+        Our core values are inclusion, acceptance, and neurodiversity. We embrace people from all parts of the spectrum and strive to create a welcoming environment where everyone feels valued and understood. This is a place where you can be yourself without judgment, where your unique ways of socializing and communicating are not just accepted but celebrated.
+      </p>
+      <p>
+        We know how isolating the world can be when it isn’t built for us. Here, you don’t have to explain your quirks, mask your traits, or conform to neurotypical expectations. Instead, we offer a way to break that isolation by sharing opportunities to meet others who truly understand.
+      </p>
+      <p>
+        Our primary purpose is to share flyers and event information relevant to Autistic and neurodivergent individuals—meetups, social gatherings, workshops, and more. Whether you’re looking for a quiet space to connect with like-minded people or an activity designed with sensory-friendly considerations, we aim to help you find events where you can feel safe, comfortable, and included.
+      </p>
+      <p>
+        Come as you are. You belong here.
+      </p>
+      <button id="toggleAboutLess">Read Less</button>
+    </div>
+  </section>
 
   <!-- Event Flyers -->
   <section id="flyers">
     <div class="flyer">
       <h2>Therapeutic Craft</h2>
       <img src="flyerAllAges.png" alt="Flyer for Therapeutic Craft" class="flyer-img" data-modal="flyerModal1">
+      <p><strong>Date:</strong> February 1, 2025</p>
+      <p><strong>Time:</strong> 1:00 PM - 3:00 PM</p>
+      <p><strong>Location:</strong> Sylvan Way Library</p>
+      <p>A relaxing session for all ages to explore creativity in a supportive environment.</p>
     </div>
+
     <div class="flyer">
       <h2>Square Pegs Kitsap</h2>
       <img src="flyer21.png" alt="Flyer for Square Pegs Kitsap" class="flyer-img" data-modal="flyerModal2">
+      <p><strong>Date:</strong> February 15, 2025</p>
+      <p><strong>Time:</strong> 1:00 PM - 3:00 PM</p>
+      <p><strong>Location:</strong> Ashley's Pub</p>
+      <p>Join us for a fun, sensory-friendly support group with games to choose from. 21+.</p>
     </div>
+
     <div class="flyer">
       <h2>Social Meetup</h2>
       <img src="flyerPoulsbo.png" alt="Flyer for Social Meetup" class="flyer-img" data-modal="flyerModal3">
+      <p><strong>Date:</strong> March 1, 2025</p>
+      <p><strong>Time:</strong> 1:00 PM - 3:00 PM</p>
+      <p><strong>Location:</strong> Poulsbo First Lutheran Church</p>
+      <p>Ages 18+ support group. Bring games!</p>
     </div>
   </section>
-
-  <!-- Accessibility Modal -->
-  <div id="accessibilityModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Accessibility Options</h2>
-      <label for="fontSize">Font Size:</label>
-      <select id="fontSize">
-        <option value="normal">Normal</option>
-        <option value="large">Large</option>
-        <option value="x-large">Extra Large</option>
-      </select>
-      <label for="contrast">Contrast:</label>
-      <select id="contrast">
-        <option value="default">Default</option>
-        <option value="high">High Contrast</option>
-        <option value="dark">Dark Mode</option>
-      </select>
-      <button id="applySettings">Apply</button>
-    </div>
-  </div>
 
   <!-- Contact Form Modal -->
   <div id="contactModal" class="modal">
