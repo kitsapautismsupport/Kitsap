@@ -43,14 +43,14 @@ header {
 
 .flyer img {
   max-width: 100%;  /* Ensure the image does not exceed the flyer's width */
-  height: auto;  /* Maintain aspect ratio */
+  height: auto;      /* Maintain aspect ratio */
   border-radius: 10px;
-  object-fit: contain;  /* Ensures the entire image fits inside without cropping */
+  object-fit: contain; /* Ensures the entire image fits inside without cropping */
   max-height: 400px;  /* Prevents the image from becoming too tall */
   display: block;
 }
 
-/* Modal styles */
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -61,26 +61,27 @@ header {
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .modal-content {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  max-width: 90%;
+  width: 90%;
+  max-width: 500px;
   max-height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  overflow-y: auto;
 }
 
-.modal img {
-  width: auto;
-  max-width: 90%;
-  max-height: 90vh;
+/* Center the h2 text in modals */
+.modal-content h2 {
+  text-align: center;
+  margin-top: 0;
 }
 
-/* Close button */
+/* Close button with black text */
 .close {
   position: absolute;
   top: 15px;
