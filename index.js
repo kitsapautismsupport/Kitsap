@@ -1,37 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Accessibility Modal
-    const modal = document.getElementById("accessibilityModal");
-    const openModalBtn = document.getElementById("accessibilityBtn");
-    const closeModalBtn = document.querySelector(".close");
-    const applySettingsBtn = document.getElementById("applySettings");
-    const fontSizeSelect = document.getElementById("fontSize");
-    const contrastSelect = document.getElementById("contrast");
+    const accessibilityModal = document.getElementById("accessibilityModal");
+    const accessibilityBtn = document.getElementById("accessibilityBtn");
+    const accessibilityClose = document.querySelector(".accessibility-close");
 
-    if (modal && openModalBtn && closeModalBtn) {
-        openModalBtn.addEventListener("click", () => {
-            modal.style.display = "block";
+    if (accessibilityModal && accessibilityBtn && accessibilityClose) {
+        accessibilityBtn.addEventListener("click", () => {
+            accessibilityModal.style.display = "block";
         });
 
-        closeModalBtn.addEventListener("click", () => {
-            modal.style.display = "none";
+        accessibilityClose.addEventListener("click", () => {
+            accessibilityModal.style.display = "none";
         });
 
         window.addEventListener("click", (event) => {
-            if (event.target === modal) {
-                modal.style.display = "none";
+            if (event.target === accessibilityModal) {
+                accessibilityModal.style.display = "none";
             }
         });
+    }
 
-        applySettingsBtn.addEventListener("click", () => {
-            // Apply Font Size
-            document.body.style.fontSize = fontSizeSelect.value === "normal" ? "" : fontSizeSelect.value;
+    // Contact Modal
+    const contactModal = document.getElementById("contactModal");
+    const contactBtn = document.getElementById("contactBtn");
+    const contactClose = document.querySelector(".contact-close");
 
-            // Apply Contrast
-            document.body.classList.remove("high-contrast", "dark-mode");
-            if (contrastSelect.value === "high") {
-                document.body.classList.add("high-contrast");
-            } else if (contrastSelect.value === "dark") {
-                document.body.classList.add("dark-mode");
+    if (contactModal && contactBtn && contactClose) {
+        contactBtn.addEventListener("click", () => {
+            contactModal.style.display = "block";
+        });
+
+        contactClose.addEventListener("click", () => {
+            contactModal.style.display = "none";
+        });
+
+        window.addEventListener("click", (event) => {
+            if (event.target === contactModal) {
+                contactModal.style.display = "none";
             }
         });
     }
@@ -53,40 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
             aboutFull.style.display = "none";
         });
     }
-    
-//contact form
-  const form = document.getElementById('contactForm');
-  const result = document.getElementById('result');
 
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    result.innerHTML = 'Please wait...';
+    // Contact Form Submission
+    const form = document.getElementById("contactForm");
+    const result = document.getElementById("result");
 
-    const formData = new FormData(form);
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        result.innerHTML = "Please wait...";
 
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: json,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        result.innerHTML = 'Thank you for your message!';
-        form.reset();
-      } else {
-        result.innerHTML = 'Oops! Something went wrong.';
-      }
-    } catch (error) {
-      result.innerHTML = 'There was a problem submitting the form.';
-    }
-
-});
+        setTimeout(() => {
+            result.innerHTML = "Thank you for your message!";
+            form.reset();
+        }, 1000);
+    });
 });
