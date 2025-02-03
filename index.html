@@ -40,14 +40,14 @@
     </div>
   </section>
 
-  <!-- Event Flyers Section -->
+<!-- Event Flyers Section -->
   <section id="flyers">
     <div class="flyer">
       <h2>Therapeutic Craft</h2>
       <p>Date: February 1, 2025</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Sylvan Way Library</p>
-      <p>A relaxing session for all ages to explore creativity in a supportive environment.</p>
+      <img src="flyerAllAges.png" alt="Therapeutic Craft Flyer" class="flyer-image" data-flyer="flyerAllAges.png">
     </div>
 
     <div class="flyer">
@@ -55,7 +55,7 @@
       <p>Date: February 15, 2025</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Ashley's Pub</p>
-      <p>Join us for a fun, sensory-friendly support group with games to choose from. 21+</p>
+      <img src="flyer21.png" alt="Square Pegs Kitsap Flyer" class="flyer-image" data-flyer="flyer21.png">
     </div>
 
     <div class="flyer">
@@ -63,9 +63,17 @@
       <p>Date: March 1, 2025</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Poulsbo First Lutheran Church</p>
-      <p>Ages 18+ support group. Bring games!</p>
+      <img src="flyerPoulsbo.png" alt="Social Meetup Flyer" class="flyer-image" data-flyer="flyerPoulsbo.png">
     </div>
   </section>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close modal-close">&times;</span>
+      <img id="modalImage" src="" alt="Enlarged Flyer">
+    </div>
+  </div>
 
   <!-- Accessibility Modal -->
   <div id="accessibilityModal" class="modal">
