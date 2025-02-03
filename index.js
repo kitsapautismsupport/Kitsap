@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (accessibilityModal && accessibilityBtn && accessibilityClose) {
         accessibilityBtn.addEventListener("click", () => {
-            accessibilityModal.style.display = "block";
+            accessibilityModal.style.display = "flex";
         });
 
         accessibilityClose.addEventListener("click", () => {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         image.addEventListener('click', () => {
             const modalId = image.getAttribute('data-modal-target');
             const modal = document.getElementById(modalId);
-            modal.style.display = "block";
+            modal.style.display = "flex";
 
             const close = modal.querySelector('.close');
             close.addEventListener("click", () => {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (contactModal && contactBtn && contactClose) {
         contactBtn.addEventListener("click", () => {
-            contactModal.style.display = "block";
+            contactModal.style.display = "flex";
         });
 
         contactClose.addEventListener("click", () => {
@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 form.querySelectorAll("input, textarea, button").forEach(field => {
                     field.style.display = "none";
                 });
-
             }, 1000);
         });
     }
