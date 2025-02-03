@@ -13,65 +13,24 @@
     <button id="contactBtn">Contact Us</button>
   </header>
 
-  <!-- Expandable About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p id="about-summary">
-      Welcome to Kitsap Neurodiversity Hub—a community space for Autists, ADHDers, and all neurodivergent individuals to connect.
-    </p>
-    <button id="toggleAbout">Read More</button>
-    <div id="about-full" style="display: none;">
-      <p>
-        Welcome to Kitsap Neurodiversity Hub, a space designed for Autists, ADHDers, and all neurodivergent individuals to connect, find community, and access events tailored to our needs. Whether you’re diagnosed, self-diagnosed, or still exploring your identity, you are welcome here.
-      </p>
-      <p>
-        Our core values are inclusion, acceptance, and neurodiversity. We embrace people from all parts of the spectrum and strive to create a welcoming environment where everyone feels valued and understood. This is a place where you can be yourself without judgment, where your unique ways of socializing and communicating are not just accepted but celebrated.
-      </p>
-      <p>
-        We know how isolating the world can be when it isn’t built for us. Here, you don’t have to explain your quirks, mask your traits, or conform to neurotypical expectations. Instead, we offer a way to break that isolation by sharing opportunities to meet others who truly understand.
-      </p>
-      <p>
-        Our primary purpose is to share flyers and event information relevant to Autistic and neurodivergent individuals—meetups, social gatherings, workshops, and more. Whether you’re looking for a quiet space to connect with like-minded people or an activity designed with sensory-friendly considerations, we aim to help you find events where you can feel safe, comfortable, and included.
-      </p>
-      <p>
-        Come as you are. You belong here.
-      </p>
-      <button id="toggleAboutLess">Read Less</button>
-    </div>
-  </section>
-
-  <!-- Event Flyers Section -->
+  <!-- Event Flyers -->
   <section id="flyers">
     <div class="flyer">
       <h2>Therapeutic Craft</h2>
-      <img src="flyerAllAges.png" alt="Flyer for Therapeutic Craft" class="flyer-img" data-modal-target="flyerModal1">
-      <p>Date: February 1, 2025</p>
-      <p>Time: 1:00 PM - 3:00 PM</p>
-      <p>Location: Sylvan Way Library</p>
-      <p>A relaxing session for all ages to explore creativity in a supportive environment.</p>
+      <img src="flyerAllAges.png" alt="Flyer for Therapeutic Craft" class="flyer-img" data-modal="flyerModal1">
     </div>
-
     <div class="flyer">
       <h2>Square Pegs Kitsap</h2>
-      <img src="flyer21.png" alt="Flyer for Square Pegs Kitsap" class="flyer-img" data-modal-target="flyerModal2">
-      <p>Date: February 15, 2025</p>
-      <p>Time: 1:00 PM - 3:00 PM</p>
-      <p>Location: Ashley's Pub</p>
-      <p>Join us for a fun, sensory-friendly support group with games to choose from. 21+</p>
+      <img src="flyer21.png" alt="Flyer for Square Pegs Kitsap" class="flyer-img" data-modal="flyerModal2">
     </div>
-
     <div class="flyer">
       <h2>Social Meetup</h2>
-      <img src="flyerPoulsbo.png" alt="Flyer for Social Meetup" class="flyer-img" data-modal-target="flyerModal3">
-      <p>Date: March 1, 2025</p>
-      <p>Time: 1:00 PM - 3:00 PM</p>
-      <p>Location: Poulsbo First Lutheran Church</p>
-      <p>Ages 18+ support group. Bring games!</p>
+      <img src="flyerPoulsbo.png" alt="Flyer for Social Meetup" class="flyer-img" data-modal="flyerModal3">
     </div>
   </section>
 
   <!-- Accessibility Modal -->
-  <div id="accessibilityModal" class="modal">
+  <div id="accessibilityModal" class="modal accessibility-modal">
     <div class="modal-content">
       <span class="close accessibility-close">&times;</span>
       <h2>Accessibility Options</h2>
@@ -92,47 +51,44 @@
   </div>
 
   <!-- Contact Form Modal -->
-  <div id="contactModal" class="modal">
+  <div id="contactModal" class="modal contact-modal">
     <div class="modal-content">
       <span class="close contact-close">&times;</span>
       <h2>Contact Us</h2>
       <form id="contactForm">
-        <input type="hidden" name="access_key" value="224897b7-2718-4313-bf8e-fa436a19f4b1">
-        <input type="hidden" name="from_name" value="Kitsap Neurodiversity Hub">
-        <input type="hidden" name="from_email" value="kitsapneurodiversityhub@gmail.com">
-        <input type="hidden" name="reply_to" value="acox@hollyridge.org">
-        <input type="hidden" name="subject" value="New Contact Form Submission">
-        <input type="hidden" name="redirect" value="https://web3forms.com/success">
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>
+        
         <label for="email">Your Email:</label>
         <input type="email" id="email" name="email" required>
+
         <label for="message">Your Message:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
+
         <button type="submit">Send Message</button>
       </form>
       <p id="result"></p>
     </div>
   </div>
 
-  <!-- Image Modals for Flyers -->
-  <div id="flyerModal1" class="modal">
+  <!-- Image Modals -->
+  <div id="flyerModal1" class="modal flyer-modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close flyer-close">&times;</span>
       <img src="flyerAllAges.png" alt="Flyer for Therapeutic Craft">
     </div>
   </div>
-  
-  <div id="flyerModal2" class="modal">
+
+  <div id="flyerModal2" class="modal flyer-modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close flyer-close">&times;</span>
       <img src="flyer21.png" alt="Flyer for Square Pegs Kitsap">
     </div>
   </div>
-  
-  <div id="flyerModal3" class="modal">
+
+  <div id="flyerModal3" class="modal flyer-modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close flyer-close">&times;</span>
       <img src="flyerPoulsbo.png" alt="Flyer for Social Meetup">
     </div>
   </div>
