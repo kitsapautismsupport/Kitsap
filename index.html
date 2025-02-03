@@ -40,40 +40,35 @@
     </div>
   </section>
 
-<!-- Event Flyers Section -->
+  <!-- Event Flyers Section -->
   <section id="flyers">
     <div class="flyer">
       <h2>Therapeutic Craft</h2>
+      <img src="flyerAllAges.png" alt="Flyer for Therapeutic Craft" class="flyer-img" data-modal-target="flyerModal1">
       <p>Date: February 1, 2025</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Sylvan Way Library</p>
-      <img src="flyerAllAges.png" alt="Therapeutic Craft Flyer" class="flyer-image" data-flyer="flyerAllAges.png">
+      <p>A relaxing session for all ages to explore creativity in a supportive environment.</p>
     </div>
 
     <div class="flyer">
       <h2>Square Pegs Kitsap</h2>
+      <img src="flyer21.png" alt="Flyer for Square Pegs Kitsap" class="flyer-img" data-modal-target="flyerModal2">
       <p>Date: February 15, 2025</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Ashley's Pub</p>
-      <img src="flyer21.png" alt="Square Pegs Kitsap Flyer" class="flyer-image" data-flyer="flyer21.png">
+      <p>Join us for a fun, sensory-friendly support group with games to choose from. 21+</p>
     </div>
 
     <div class="flyer">
       <h2>Social Meetup</h2>
+      <img src="flyerPoulsbo.png" alt="Flyer for Social Meetup" class="flyer-img" data-modal-target="flyerModal3">
       <p>Date: March 1, 2025</p>
       <p>Time: 1:00 PM - 3:00 PM</p>
       <p>Location: Poulsbo First Lutheran Church</p>
-      <img src="flyerPoulsbo.png" alt="Social Meetup Flyer" class="flyer-image" data-flyer="flyerPoulsbo.png">
+      <p>Ages 18+ support group. Bring games!</p>
     </div>
   </section>
-
-  <!-- Image Modal -->
-  <div id="imageModal" class="modalDetail">
-    <div class="modal-content">
-      <span class="closeDetail modal-close">&times;</span>
-      <img id="modalImage" src="" alt="Enlarged Flyer">
-    </div>
-  </div>
 
   <!-- Accessibility Modal -->
   <div id="accessibilityModal" class="modal">
@@ -102,7 +97,7 @@
       <span class="close contact-close">&times;</span>
       <h2>Contact Us</h2>
       <form id="contactForm">
-                <input type="hidden" name="access_key" value="224897b7-2718-4313-bf8e-fa436a19f4b1">
+        <input type="hidden" name="access_key" value="224897b7-2718-4313-bf8e-fa436a19f4b1">
         <input type="hidden" name="from_name" value="Kitsap Neurodiversity Hub">
         <input type="hidden" name="from_email" value="kitsapneurodiversityhub@gmail.com">
         <input type="hidden" name="reply_to" value="acox@hollyridge.org">
@@ -117,6 +112,28 @@
         <button type="submit">Send Message</button>
       </form>
       <p id="result"></p>
+    </div>
+  </div>
+
+  <!-- Image Modals -->
+  <div id="flyerModal1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="flyerAllAges.png" alt="Flyer for Therapeutic Craft">
+    </div>
+  </div>
+  
+  <div id="flyerModal2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="flyer21.png" alt="Flyer for Square Pegs Kitsap">
+    </div>
+  </div>
+  
+  <div id="flyerModal3" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="flyerPoulsbo.png" alt="Flyer for Social Meetup">
     </div>
   </div>
 
