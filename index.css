@@ -35,7 +35,7 @@ header {
   border-radius: 10px;
 }
 
-/* Unique Modal Styles */
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -58,8 +58,7 @@ header {
   overflow-y: auto;
 }
 
-/* Image Modal */
-.flyer-modal img {
+.modal img {
   max-width: 100%;
   height: auto;
   max-height: 80vh;
@@ -68,13 +67,17 @@ header {
 }
 
 /* Contact Form Styling */
-.contact-modal form {
+#contactForm {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.contact-modal input, .contact-modal textarea {
+#contactForm label {
+  font-weight: bold;
+}
+
+#contactForm input, #contactForm textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
