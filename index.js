@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Contact Modal
     const contactModal = document.getElementById("contactModal");
     const contactBtn = document.getElementById("contactBtn");
     const contactClose = contactModal.querySelector(".close");
@@ -20,15 +19,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Contact Form Submission
+    // ✅ Fix: Properly Submit to Web3Forms
     contactForm.addEventListener("submit", async function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default form action
+
         resultMessage.textContent = "Sending...";
-        
-        setTimeout(() => {
-            resultMessage.textContent = "Thank you for your message!";
-            contactForm.style.display = "none"; // Hide the form after submission
-        }, 1000);
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData,
+            });
+
+            if (response.ok) {
+                resultMessage.textContent = "Thank you for your message!";
+                setTimeout(() => {
+                    contactModal.style.display = "none"; // Hide modal after success
+                    contactForm.reset(); // Reset form for next use
+                }, 2000);
+            } else {
+                resultMessage.textContent = "Error submitting form. Please try again.";
+            }
+        } catch (error) {
+            resultMessage.textContent = "Network error. Please check your connection.";
+        }
     });
 
     // About Section Expand/Collapse
