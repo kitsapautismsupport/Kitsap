@@ -26,7 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
         resultMessage.textContent = "Sending...";
 
         const formData = new FormData(contactForm);
-
+       
+    // ✅ Append CC Email for forwarding
+        formData.append("cc", "phillipjohngalbraith@yahoo.com");
+        
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
